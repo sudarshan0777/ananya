@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Ananya – Best Restaurant & Lodging in Shrigonda</title>
+    <meta name="description" content="Enjoy delicious veg & non-veg thalis, cozy rooms, and great service at Hotel Ananya, the top-rated hotel in Shrigonda.">
+    <meta name="keywords" content="Best hotel in Shrigonda, Lodging in Shrigonda, Non veg hotel Shrigonda, Restaurant in Shrigonda, AC rooms Shrigonda">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hotel-ananya.in/">
+    <meta property="og:title" content="Hotel Ananya – Best Restaurant & Lodging in Shrigonda">
+    <meta property="og:description" content="Enjoy delicious veg & non-veg thalis, cozy rooms, and great service at Hotel Ananya, the top-rated hotel in Shrigonda.">
+    <meta property="og:image" content="https://hotel-ananya.in/images/hotel-ananya-social.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hotel-ananya.in/">
+    <meta property="twitter:title" content="Hotel Ananya – Best Restaurant & Lodging in Shrigonda">
+    <meta property="twitter:description" content="Enjoy delicious veg & non-veg thalis, cozy rooms, and great service at Hotel Ananya, the top-rated hotel in Shrigonda.">
+    <meta property="twitter:image" content="https://hotel-ananya.in/images/hotel-ananya-social.jpg">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Hotel", "Restaurant", "LocalBusiness"],
+      "name": "Hotel Ananya – Restaurant & Lodging",
+      "image": "https://hotel-ananya.in/images/hotel-ananya.jpg",
+      "@id": "https://hotel-ananya.in/",
+      "url": "https://hotel-ananya.in/",
+      "telephone": "+918600012345",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ahmednagar-Daund Highway, near XYZ Landmark",
+        "addressLocality": "Shrigonda",
+        "addressRegion": "Maharashtra",
+        "postalCode": "413701",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.6156",
+        "longitude": "74.6989"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "07:00",
+        "closes": "23:00"
+      },
+      "priceRange": "₹₹",
+      "servesCuisine": ["Indian", "Maharashtrian"],
+      "hasMenu": "https://hotel-ananya.in/menu"
+    }
+    </script>
+    
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        amber: {
+                            50: '#fff8f0',
+                            100: '#ffeedb',
+                            200: '#ffdcb6',
+                            300: '#ffc381',
+                            400: '#ffa24d',
+                            500: '#ff8c26',
+                            600: '#f97316',
+                            700: '#e05d12',
+                            800: '#b94910',
+                            900: '#963d10',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom CSS */
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .room-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918600012345" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">A</div>
+                <h1 class="text-xl font-bold text-amber-800">Hotel Ananya</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-amber-800 hover:text-amber-600 font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium">About</a>
+                <a href="#menu" class="text-gray-700 hover:text-amber-600 font-medium">Menu</a>
+                <a href="#rooms" class="text-gray-700 hover:text-amber-600 font-medium">Rooms</a>
+                <a href="#contact" class="text-gray-700 hover:text-amber-600 font-medium">Contact</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-amber-600">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-amber-600">About</a>
+            <a href="#menu" class="block py-2 text-gray-700 hover:text-amber-600">Menu</a>
+            <a href="#rooms" class="block py-2 text-gray-700 hover:text-amber-600">Rooms</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-amber-600">Contact</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Hotel Ananya</h1>
+            <h2 class="text-2xl md:text-3xl font-medium mb-6">Shrigonda's Most Loved Restaurant & Lodging</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Delicious food, peaceful rooms, heartfelt service – all under one roof.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+918600012345" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now
+                </a>
+                <a href="https://maps.google.com/?q=Hotel+Ananya,Shrigonda" target="_blank" class="bg-white hover:bg-gray-100 text-amber-800 font-bold py-3 px-6 rounded-full transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-800 mb-4">About Hotel Ananya</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hotel Ananya" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Hotel Ananya is the finest family hotel in Shrigonda, offering delicious veg and non-veg cuisine, comfortable AC/Non-AC rooms, and warm hospitality. Whether you're a traveler or local food lover, Hotel Ananya welcomes you with unmatched taste and restful lodging.
+                    </p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-amber-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-amber-800">Over 500+ happy guests every month</h3>
+                                <p class="text-gray-600">Trusted by travelers and locals alike</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-utensils text-amber-600 mr-3"></i>
+                            <span>Delicious Food</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-bed text-amber-600 mr-3"></i>
+                            <span>Comfortable Rooms</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-wifi text-amber-600 mr-3"></i>
+                            <span>Free WiFi</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-parking text-amber-600 mr-3"></i>
+                            <span>Parking Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-800 mb-4">Our Special Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Experience the authentic taste of Maharashtra with our specially curated dishes</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Special Mutton Thali" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Special Mutton Thali</h3>
+                        <p class="text-gray-600 mb-4">Authentic Maharashtrian mutton curry with bhakri, rice, and accompaniments</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹250</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Veg Thali" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Veg Thali</h3>
+                        <p class="text-gray-600 mb-4">Complete vegetarian meal with dal, rice, roti, vegetables, salad, and sweets</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹180</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1518492104633-130d0cc84637?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Chicken Masala" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Chicken Masala</h3>
+                        <p class="text-gray-600 mb-4">Spicy and flavorful chicken curry served with butter naan or rice</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹220</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 4 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Paneer Special" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Paneer Special</h3>
+                        <p class="text-gray-600 mb-4">Creamy paneer in rich gravy with naan or tandoori roti</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹200</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 5 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1601050690777-623a733f6730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bhakri & Thecha" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Bhakri & Thecha</h3>
+                        <p class="text-gray-600 mb-4">Traditional Maharashtrian bhakri with spicy thecha and onion</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹120</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 6 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1971&q=80" alt="Rice Combos" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Rice Combos</h3>
+                        <p class="text-gray-600 mb-4">Variety of rice dishes including veg biryani, lemon rice, and curd rice</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹150</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View Full Menu & Book Table
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-800 mb-4">Our Comfortable Rooms</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Experience a peaceful stay with all modern amenities</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- AC Room -->
+                <div class="room-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70344?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AC Room" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-2">Deluxe AC Room</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-amber-600 font-bold text-xl">₹1200/night</span>
+                            <span class="ml-4 text-gray-600">(₹1000 for 12+ hours)</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Spacious air-conditioned room with all modern amenities for a comfortable stay.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-wifi text-amber-600 mr-2"></i>
+                                <span>Free WiFi</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tv text-amber-600 mr-2"></i>
+                                <span>LED TV</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-amber-600 mr-2"></i>
+                                <span>Room Service</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shower text-amber-600 mr-2"></i>
+                                <span>24/7 Hot Water</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="block w-full bg-amber-600 hover:bg-amber-700 text-white text-center font-bold py-2 px-4 rounded-full transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Non-AC Room -->
+                <div class="room-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1582719471377-44e9cdea6b3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Non-AC Room" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-2">Standard Non-AC Room</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-amber-600 font-bold text-xl">₹800/night</span>
+                            <span class="ml-4 text-gray-600">(₹700 for 12+ hours)</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Comfortable non-AC room with all essential facilities for budget travelers.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-tv text-amber-600 mr-2"></i>
+                                <span>LED TV</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-fan text-amber-600 mr-2"></i>
+                                <span>Fan</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-amber-600 mr-2"></i>
+                                <span>Room Service</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shower text-amber-600 mr-2"></i>
+                                <span>24/7 Hot Water</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="block w-full bg-amber-600 hover:bg-amber-700 text-white text-center font-bold py-2 px-4 rounded-full transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-amber-800 mb-4">Room Policies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-clock text-amber-600 mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold">Check-in/Check-out</h4>
+                            <p class="text-gray-600">12 PM / 11 AM</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-child text-amber-600 mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold">Children Policy</h4>
+                            <p class="text-gray-600">Children below 5 stay free</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-credit-card text-amber-600 mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-bold">Payment Options</h4>
+                            <p class="text-gray-600">Cash, UPI, Cards accepted</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-800 mb-4">What Our Guests Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experience at Hotel Ananya</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-amber-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center text-amber-800 font-bold mr-4">R</div>
+                        <div>
+                            <h4 class="font-bold">Rajesh P.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Best hotel in Shrigonda. Food was amazing and rooms were very clean! The staff was very helpful and the location is perfect for travelers."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-amber-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center text-amber-800 font-bold mr-4">S</div>
+                        <div>
+                            <h4 class="font-bold">Snehal M.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Affordable lodging with tasty non-veg meals. Highly recommend! The mutton thali is a must-try. We stayed for 2 nights and everything was perfect."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-amber-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center text-amber-800 font-bold mr-4">A</div>
+                        <div>
+                            <h4 class="font-bold">Amit K.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Great value for money. The AC room was spacious and clean. Food quality is excellent. Will definitely stay here again during my next visit to Shrigonda."</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-800 font-medium">
+                    <i class="fab fa-google mr-2"></i> Read more reviews on Google
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-800 mb-4">Our Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A glimpse of our delicious food and comfortable accommodations</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Hotel Lobby" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1566669437685-2cbc7f00a19f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restaurant Area" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Food Presentation" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Room Interior" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1600566752227-17c8c9bde586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bathroom" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Special Dish" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1565035019201-83d6e6db76e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Bedroom" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1601050690777-623a733f6730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Traditional Food" class="w-full h-full object-cover transition duration-300 hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map & Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-800 mb-4">Find Us & Contact</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We're conveniently located on the Ahmednagar-Daund Highway</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <div class="h-96 w-full rounded-lg overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.036567198183!2d74.6963153154154!3d18.61559698743552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc23a6f3e9d0f4d%3A0x9e7a2e9c3a2e3b1f!2sShrigonda%2C%20Maharashtra%20413701!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    
+                    <div class="mt-6 bg-amber-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-amber-600 mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold text-lg text-amber-800 mb-1">Address</h3>
+                                <p class="text-gray-700">Hotel Ananya – Restaurant & Lodging<br>
+                                Ahmednagar-Daund Highway, near XYZ Landmark<br>
+                                Shrigonda, Maharashtra 413701</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-phone-alt text-amber-600 mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold text-lg text-amber-800 mb-1">Phone</h3>
+                                <p class="text-gray-700">086000 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-amber-600 mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-bold text-lg text-amber-800 mb-1">Opening Hours</h3>
+                                <p class="text-gray-700">Restaurant: 7:00 AM to 11:00 PM<br>
+                                Check-in: 12:00 PM | Check-out: 11:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-amber-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-6">Contact & Booking</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 font-medium mb-1">Service Required</label>
+                                <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <option value="dining">Dining/Table Booking</option>
+                                    <option value="room">Room Booking</option>
+                                    <option value="both">Both Dining & Room</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="date" class="block text-gray-700 font-medium mb-1">Date (if booking)</label>
+                                <input type="date" id="date" name="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                        
+                        <div class="mt-6 text-center">
+                            <p class="text-gray-600 mb-4">Or contact us directly via:</p>
+                            <div class="flex justify-center space-x-4">
+                                <a href="tel:+918600012345" class="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full">
+                                    <i class="fas fa-phone-alt"></i>
+                                </a>
+                                <a href="https://wa.me/918600012345" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="mailto:info@hotelananya.com" class="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hotel Ananya</h3>
+                    <p class="mb-4">The finest family hotel in Shrigonda, offering delicious cuisine and comfortable lodging with warm hospitality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-amber-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-amber-200"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-amber-200"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-amber-200">Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-200">About Us</a></li>
+                        <li><a href="#menu" class="hover:text-amber-200">Our Menu</a></li>
+                        <li><a href="#rooms" class="hover:text-amber-200">Rooms</a></li>
+                        <li><a href="#contact" class="hover:text-amber-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li>Restaurant</li>
+                        <li>Lodging</li>
+                        <li>Room Service</li>
+                        <li>Parking</li>
+                        <li>24/7 Hot Water</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Ahmednagar-Daund Highway, Shrigonda, Maharashtra 413701</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>086000 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@hotelananya.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Hotel Ananya – Restaurant & Lodging. All Rights Reserved.</p>
+                <p class="mt-2 text-amber-200">Designed with ❤️ for Shrigonda</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you shortly.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
