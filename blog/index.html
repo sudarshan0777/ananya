@@ -1,1 +1,494 @@
-bl
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Ananya Blog – Travel Tips, Food Guides & Local Insights | Shrigonda</title>
+    <meta name="description" content="Explore our blog for travel tips, food guides, local insights about Shrigonda, and updates from Hotel Ananya - the best hotel and restaurant in Shrigonda.">
+    <meta name="keywords" content="Shrigonda travel blog, Hotel Ananya updates, Maharashtra food guide, travel tips Shrigonda, local attractions Shrigonda">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hotel-ananya.in/blog">
+    <meta property="og:title" content="Hotel Ananya Blog – Travel Tips, Food Guides & Local Insights">
+    <meta property="og:description" content="Explore our blog for travel tips, food guides, local insights about Shrigonda, and updates from Hotel Ananya.">
+    <meta property="og:image" content="https://www.hotel-ananya.in/images/hotel-ananya-blog-social.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.hotel-ananya.in/blog">
+    <meta property="twitter:title" content="Hotel Ananya Blog – Travel Tips, Food Guides & Local Insights">
+    <meta property="twitter:description" content="Explore our blog for travel tips, food guides, local insights about Shrigonda, and updates from Hotel Ananya.">
+    <meta property="twitter:image" content="https://www.hotel-ananya.in/images/hotel-ananya-blog-social.jpg">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "headline": "Hotel Ananya Blog",
+      "description": "Travel Tips, Food Guides & Local Insights from Shrigonda",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hotel Ananya",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.hotel-ananya.in/images/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hotel-ananya.in/blog"
+      }
+    }
+    </script>
+    
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        amber: {
+                            50: '#fff8f0',
+                            100: '#ffeedb',
+                            200: '#ffdcb6',
+                            300: '#ffc381',
+                            400: '#ffa24d',
+                            500: '#ff8c26',
+                            600: '#f97316',
+                            700: '#e05d12',
+                            800: '#b94910',
+                            900: '#963d10',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .category-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .category-tag:hover {
+            background-color: #f97316;
+            color: white;
+        }
+        
+        .read-more-btn:hover {
+            background-color: #e05d12;
+        }
+        
+        .pagination-btn:hover {
+            background-color: #f97316;
+            color: white;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">A</div>
+                <h1 class="text-xl font-bold text-amber-800">Hotel Ananya</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-amber-600 font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-700 hover:text-amber-600 font-medium">About</a>
+                <a href="index.html#menu" class="text-gray-700 hover:text-amber-600 font-medium">Menu</a>
+                <a href="index.html#rooms" class="text-gray-700 hover:text-amber-600 font-medium">Rooms</a>
+                <a href="blog.html" class="text-amber-800 hover:text-amber-600 font-medium">Blog</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-amber-600 font-medium">Contact</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 text-gray-700 hover:text-amber-600">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-700 hover:text-amber-600">About</a>
+            <a href="index.html#menu" class="block py-2 text-gray-700 hover:text-amber-600">Menu</a>
+            <a href="index.html#rooms" class="block py-2 text-gray-700 hover:text-amber-600">Rooms</a>
+            <a href="blog.html" class="block py-2 text-amber-800 hover:text-amber-600">Blog</a>
+            <a href="index.html#contact" class="block py-2 text-gray-700 hover:text-amber-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="bg-amber-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Hotel Ananya Blog</h1>
+            <p class="text-xl max-w-2xl mx-auto">Travel tips, food guides, local insights, and updates from Shrigonda's favorite hotel & restaurant</p>
+            <div class="mt-8 max-w-md mx-auto relative">
+                <input type="text" placeholder="Search blog posts..." class="w-full px-4 py-3 rounded-full text-gray-800 focus:outline-none search-box">
+                <button class="absolute right-3 top-3 text-amber-600">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Main Content -->
+                <main class="lg:w-2/3">
+                    <!-- Featured Post -->
+                    <article class="mb-12 bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1582719471377-44e9cdea6b3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Featured Post" class="w-full h-64 md:h-80 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Featured</span>
+                                <span class="ml-4 text-gray-500 text-sm">June 15, 2023</span>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-amber-800 mb-3">5 Reasons Why Hotel Ananya is the Best Choice in Shrigonda</h2>
+                            <p class="text-gray-600 mb-4">Discover what makes Hotel Ananya stand out among Shrigonda's lodging and dining options, from our authentic Maharashtrian cuisine to our impeccable service.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Travel</a>
+                                <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Shrigonda</a>
+                                <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Hotel Tips</a>
+                            </div>
+                            <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-6 rounded-full transition duration-300 read-more-btn">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Posts Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Maharashtrian Cuisine" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-gray-500 text-sm">May 28, 2023</span>
+                                <h3 class="text-xl font-bold text-amber-800 my-2">Exploring Maharashtrian Cuisine: Must-Try Dishes at Hotel Ananya</h3>
+                                <p class="text-gray-600 mb-4 text-sm">From spicy Kolhapuri dishes to comforting varan bhaat, discover the rich flavors of Maharashtra through our signature dishes...</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Food</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Maharashtrian</a>
+                                </div>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-sm flex items-center">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Shrigonda Attractions" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-gray-500 text-sm">April 15, 2023</span>
+                                <h3 class="text-xl font-bold text-amber-800 my-2">Top 5 Hidden Gems to Explore in Shrigonda</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Beyond our comfortable lodging, Shrigonda offers fascinating historical sites, natural beauty, and cultural experiences waiting to be discovered...</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Travel</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Shrigonda</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Attractions</a>
+                                </div>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-sm flex items-center">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Thali Presentation" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-gray-500 text-sm">March 22, 2023</span>
+                                <h3 class="text-xl font-bold text-amber-800 my-2">The Art of Thali: Balancing Flavors in Maharashtrian Cuisine</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Learn how our chefs craft the perfect thali experience at Hotel Ananya, balancing six tastes for a harmonious dining experience...</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Food</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Cuisine</a>
+                                </div>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-sm flex items-center">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 4 -->
+                        <article class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Hotel Room" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-gray-500 text-sm">February 10, 2023</span>
+                                <h3 class="text-xl font-bold text-amber-800 my-2">Traveler's Guide: What to Pack for Your Stay in Shrigonda</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Essential packing tips for visitors to Shrigonda, considering Maharashtra's climate and local customs for a comfortable stay...</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Travel</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Tips</a>
+                                </div>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-sm flex items-center">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 5 -->
+                        <article class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1565035019201-83d6e6db76e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Hotel Service" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-gray-500 text-sm">January 18, 2023</span>
+                                <h3 class="text-xl font-bold text-amber-800 my-2">Behind the Scenes: A Day in the Life at Hotel Ananya</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Meet our team and discover the dedication that goes into making every guest's experience at Hotel Ananya memorable...</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Hotel</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Behind the Scenes</a>
+                                </div>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-sm flex items-center">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 6 -->
+                        <article class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1601050690777-623a733f6730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Traditional Food" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-gray-500 text-sm">December 5, 2022</span>
+                                <h3 class="text-xl font-bold text-amber-800 my-2">Seasonal Specials: Winter Dishes at Hotel Ananya</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Discover our winter menu featuring seasonal ingredients and traditional Maharashtrian recipes perfect for cooler weather...</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Food</a>
+                                    <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full category-tag">Seasonal</a>
+                                </div>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium text-sm flex items-center">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="flex items-center space-x-2">
+                            <a href="#" class="px-4 py-2 border border-amber-300 rounded-full text-amber-600 font-medium pagination-btn">&laquo;</a>
+                            <a href="#" class="px-4 py-2 bg-amber-600 text-white rounded-full font-medium">1</a>
+                            <a href="#" class="px-4 py-2 border border-amber-300 rounded-full text-amber-600 font-medium pagination-btn">2</a>
+                            <a href="#" class="px-4 py-2 border border-amber-300 rounded-full text-amber-600 font-medium pagination-btn">3</a>
+                            <a href="#" class="px-4 py-2 border border-amber-300 rounded-full text-amber-600 font-medium pagination-btn">&raquo;</a>
+                        </nav>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3">
+                    <!-- About Widget -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                        <h3 class="text-xl font-bold text-amber-800 mb-4">About Hotel Ananya</h3>
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hotel Ananya" class="w-full h-40 object-cover rounded mb-4">
+                        <p class="text-gray-600">Hotel Ananya is Shrigonda's premier destination for delicious cuisine and comfortable lodging. Our blog shares travel tips, food insights, and local knowledge to enhance your visit to our beautiful region.</p>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                        <h3 class="text-xl font-bold text-amber-800 mb-4">Categories</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-amber-600">
+                                    <span>Travel Tips</span>
+                                    <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded-full">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-amber-600">
+                                    <span>Food Guides</span>
+                                    <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded-full">8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-amber-600">
+                                    <span>Local Attractions</span>
+                                    <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded-full">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-amber-600">
+                                    <span>Hotel Updates</span>
+                                    <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded-full">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-amber-600">
+                                    <span>Seasonal Specials</span>
+                                    <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded-full">3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                        <h3 class="text-xl font-bold text-amber-800 mb-4">Popular Posts</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-start group">
+                                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Popular Post" class="w-16 h-16 object-cover rounded mr-4">
+                                <div>
+                                    <h4 class="font-medium text-gray-800 group-hover:text-amber-600">Exploring Maharashtrian Cuisine</h4>
+                                    <span class="text-xs text-gray-500">May 28, 2023</span>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Popular Post" class="w-16 h-16 object-cover rounded mr-4">
+                                <div>
+                                    <h4 class="font-medium text-gray-800 group-hover:text-amber-600">Top 5 Hidden Gems in Shrigonda</h4>
+                                    <span class="text-xs text-gray-500">April 15, 2023</span>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <img src="https://images.unsplash.com/photo-1601050690777-623a733f6730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Popular Post" class="w-16 h-16 object-cover rounded mr-4">
+                                <div>
+                                    <h4 class="font-medium text-gray-800 group-hover:text-amber-600">Winter Dishes at Hotel Ananya</h4>
+                                    <span class="text-xs text-gray-500">December 5, 2022</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-amber-800 mb-4">Tags</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Maharashtrian</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Thali</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Shrigonda</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Travel</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Food</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Lodging</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Hotel</a>
+                            <a href="#" class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full hover:bg-amber-600 hover:text-white">Restaurant</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 bg-amber-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="max-w-2xl mx-auto mb-6">Get the latest updates, travel tips, and special offers from Hotel Ananya directly to your inbox.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-full focus:outline-none text-gray-800">
+                <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-medium px-6 py-3 rounded-r-full transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hotel Ananya</h3>
+                    <p class="mb-4">The finest family hotel in Shrigonda, offering delicious cuisine and comfortable lodging with warm hospitality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-amber-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-amber-200"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-amber-200"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-amber-200">Home</a></li>
+                        <li><a href="index.html#about" class="hover:text-amber-200">About Us</a></li>
+                        <li><a href="index.html#menu" class="hover:text-amber-200">Our Menu</a></li>
+                        <li><a href="index.html#rooms" class="hover:text-amber-200">Rooms</a></li>
+                        <li><a href="blog.html" class="hover:text-amber-200">Blog</a></li>
+                        <li><a href="index.html#contact" class="hover:text-amber-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li>Restaurant</li>
+                        <li>Lodging</li>
+                        <li>Room Service</li>
+                        <li>Parking</li>
+                        <li>24/7 Hot Water</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Shrigonda-Kashti Road, Shrigonda, Maharashtra 413701</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>9422726595</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@hotel-ananya.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Hotel Ananya – Restaurant & Lodging. All Rights Reserved.</p>
+                <p class="mt-2 text-amber-200">Designed with ❤️ By <a href="https://www.webatcost.in" class="hover:text-white">WebAtCost Web Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
